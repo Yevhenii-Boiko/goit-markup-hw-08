@@ -1,0 +1,53 @@
+// Utils styles
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+
+// Base styles
+@import "./base/base";
+
+// Header
+@import "./components/page-header";
+
+// Header-logo
+@import "./components/header-logo";
+
+// Navigation
+@import "./components/navigation";
+
+// Header contacts
+@import "./components/header-contacts";
+
+// Hero
+@import "./components/hero";
+
+// Modal-window
+@import "./components/modal-window";
+
+// Order-form
+@import "./components/order-form";
+
+// Features
+@import "./components/features";
+
+// Activity
+@import "./components/activity";
+
+// Team
+@import "./components/team";
+
+// Team-socials
+@import "./components/socials";
+
+// Clients
+@import "./components/clients";
+
+// Portfolio
+@import "./components/portfolio-filters";
+@import "./components/portfolio-projects";
+
+// Page-footer
+@import "./components/page-footer";
+@import "./components/footer-social-box";
+
+// Signing form
+@import "./components/signing-form";

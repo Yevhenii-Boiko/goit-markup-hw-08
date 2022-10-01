@@ -1,0 +1,37 @@
+.contacts {
+  display: flex;
+  align-items: baseline;
+
+  &__email {
+    margin-right: 48px;
+  }
+
+  &__email-link,
+  &__tel-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:hover,
+    &:focus,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
