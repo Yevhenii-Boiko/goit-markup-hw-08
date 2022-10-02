@@ -4,14 +4,15 @@ address {
 }
 
 .footer {
+  // Breakpoints:
+  // Mobile - 480px
+  // Tablet - 768px
+  // Desktop - 1200px
+  display: inline-block;
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
   background-color: var(--alternative-bg-color);
-
-  &__container {
-    display: flex;
-    align-items: baseline;
-  }
 
   &__logo {
     font-family: "Raleway";
@@ -20,28 +21,74 @@ address {
     line-height: 1.2;
     color: var(--secondary-text-color);
   }
-}
-.address-item {
-  margin-bottom: 9px;
 
-  &__link {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--secondary-text-color);
+  .address-box,
+  .social-box {
+    margin-bottom: 60px;
   }
 
-  &__mail-link,
-  &__tel-link {
-    color: var(--primary-text-color);
+  .address-item {
+    margin-bottom: 9px;
 
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &__link {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--secondary-text-color);
+    }
 
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
+    &__mail-link,
+    &__tel-link {
+      color: var(--primary-text-color);
+
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  // Tablet styles
+  @media screen and (min-width: 768px) {
+    display: flex;
+    text-align-last: left;
+    // padding-right: 89px;
+    // padding-left: 76px;
+    // padding-top: 60px;
+    // padding-bottom: 60px;
+    // background-color: var(--alternative-bg-color);
+
+    &__container {
+      display: flex;
+      align-items: baseline;
+    }
+    .address-box,
+    .social-box {
+      margin-bottom: 0;
+    }
+    // &__logo {
+    //   font-family: "Raleway";
+    //   font-weight: 700;
+    //   font-size: 26px;
+    //   line-height: 1.2;
+    //   color: var(--secondary-text-color);
+    // }
+  }
+
+  // Desktop styles
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    // max-width: 1200px;
+    // padding-right: 0;
+    // padding-left: 0;
+
+    &__container {
+      display: flex;
+      align-items: baseline;
     }
   }
 }

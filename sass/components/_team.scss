@@ -1,8 +1,16 @@
 .team {
-  height: 708px;
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background-color: var(--section-bg-color);
+  // Breakpoints:
+  // Mobile - 480px
+  // Tablet - 768px
+  // Desktop - 1200px
+
+  // Tablet styles
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--section-bg-color);
+  }
 
   &__heading {
     margin-right: auto;
@@ -11,15 +19,16 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
   }
 
   &__card {
-    width: 270px;
-    flex-basis: calc((100% - 90px) / 4);
+    width: 354px;
+    flex-basis: calc((100% - 30px) / 2);
     background-color: var(--primary-bg-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px 0px 4px 4px;
@@ -54,5 +63,57 @@
     margin: 0;
     margin-top: 10px;
     margin-bottom: 16px;
+  }
+
+  // Desktop styles
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: var(--section-bg-color);
+
+    &__heading {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 30px;
+      margin-top: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__card {
+      width: 270px;
+      flex-basis: calc((100% - 90px) / 4);
+    }
+
+    &__title {
+      padding: 30px;
+    }
+
+    &__employee-name {
+      color: var(--primary-title-color);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.7;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+
+    &__employee-position {
+      color: var(--primary-text-color);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: 0.03em;
+      text-align: center;
+      margin: 0;
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
   }
 }

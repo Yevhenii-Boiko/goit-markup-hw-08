@@ -1,7 +1,8 @@
 .social-box {
-  display: flex;
-  margin-left: 70px;
-  flex-direction: column;
+  // Breakpoints:
+  // Mobile - 480px
+  // Tablet - 768px
+  // Desktop - 1200px
 
   &__text {
     margin-top: 0;
@@ -12,5 +13,38 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--secondary-text-color);
+  }
+
+  // Tablet styles
+  @media screen and (min-width: 768px) {
+    margin-left: 165px;
+    &__text {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--secondary-text-color);
+    }
+  }
+
+  // Desktop styles
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 70px;
+    flex-direction: column;
+
+    &__text {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--secondary-text-color);
+    }
   }
 }

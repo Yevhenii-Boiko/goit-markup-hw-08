@@ -1,10 +1,18 @@
 .socials {
+  // Breakpoints:
+  // Mobile - 480px
+  // Tablet - 768px
+  // Desktop - 1200px
+
   width: 206px;
   height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  margin-right: auto;
+  margin-left: auto;
 
   &__item {
     display: flex;
