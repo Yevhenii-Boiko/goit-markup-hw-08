@@ -1,8 +1,23 @@
 .header {
+  // Breakpoints:
+  // Mobile - 480px
+  // Tablet - 768px
+  // Desktop - 1200px
+  display: inline-block;
+  min-width: 480px;
   border: 1px solid #ececec;
-
-  &__container {
-    display: flex;
-    align-items: center;
+  // Tablet styles
+  @media screen and (min-width: 768px) {
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+  }
+  // Desktop styles
+  @media screen and (min-width: 1200px) {
+    &__container {
+      display: flex;
+      align-items: center;
+    }
   }
 }

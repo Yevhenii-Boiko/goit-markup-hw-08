@@ -55,36 +55,24 @@ address {
   // Tablet styles
   @media screen and (min-width: 768px) {
     display: flex;
-    text-align-last: left;
-    // padding-right: 89px;
-    // padding-left: 76px;
-    // padding-top: 60px;
-    // padding-bottom: 60px;
-    // background-color: var(--alternative-bg-color);
 
     &__container {
       display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       align-items: baseline;
     }
     .address-box,
     .social-box {
       margin-bottom: 0;
     }
-    // &__logo {
-    //   font-family: "Raleway";
-    //   font-weight: 700;
-    //   font-size: 26px;
-    //   line-height: 1.2;
-    //   color: var(--secondary-text-color);
-    // }
   }
 
   // Desktop styles
   @media screen and (min-width: 1200px) {
     display: flex;
-    // max-width: 1200px;
-    // padding-right: 0;
-    // padding-left: 0;
+    text-align: left;
 
     &__container {
       display: flex;

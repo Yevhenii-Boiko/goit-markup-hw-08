@@ -90,17 +90,40 @@ a {
 }
 
 .header {
+  display: inline-block;
+  min-width: 480px;
   border: 1px solid #ececec;
 }
-.header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
+.logo {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--primary-title-color);
+}
 .logo__beginning {
   color: var(--accent-color);
 }
@@ -112,11 +135,6 @@ a {
             align-items: center;
     padding-top: 25px;
     padding-bottom: 25px;
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.2;
-    color: var(--primary-title-color);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -250,7 +268,7 @@ a {
 
 .hero {
   display: inline-block;
-  max-width: 480px;
+  min-width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding: 118px 60px;
@@ -348,7 +366,7 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
+  width: 450px;
   height: auto;
   padding: 40px;
   background-color: var(--primary-bg-color);
@@ -385,6 +403,11 @@ a {
 }
 .modal__btn:hover, .modal__btn:focus {
   fill: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .backdrope.is-hidden {
@@ -587,8 +610,8 @@ a {
 }
 .order-form-agreement__desc {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 1.1;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   -webkit-user-select: none;
@@ -599,9 +622,16 @@ a {
 .order-form-agreement__link {
   color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .order-form-agreement__desc {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
 
 .features {
   padding-top: 60px;
+  padding-bottom: 60px;
   display: inline-block;
 }
 .features__list {
@@ -752,37 +782,34 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .team {
-    max-width: 768px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: var(--section-bg-color);
-  }
+.team {
+  display: inline-block;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--section-bg-color);
 }
 .team__heading {
   margin-right: auto;
   margin-left: auto;
+  font-size: 28px;
 }
 .team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
 .team__card {
-  width: 354px;
+  margin-bottom: 30px;
+  width: 450px;
   -ms-flex-preferred-size: calc((100% - 30px) / 2);
       flex-basis: calc((100% - 30px) / 2);
   background-color: var(--primary-bg-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 0px 4px 4px;
+}
+.team__card:last-child {
+  margin-bottom: 0;
 }
 .team__img {
   display: block;
@@ -811,12 +838,14 @@ a {
   margin-top: 10px;
   margin-bottom: 16px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .team {
-    max-width: 1200px;
-    padding-top: 94px;
-    padding-bottom: 94px;
-    background-color: var(--section-bg-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 768px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .team__heading {
     margin-right: auto;
@@ -826,39 +855,48 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
   }
   .team__card {
+    margin-bottom: 0;
+    width: 354px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+  .team__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    max-width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .team__heading {
+    font-size: 36px;
+  }
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .team__card {
+    margin-bottom: 0;
     width: 270px;
     -ms-flex-preferred-size: calc((100% - 90px) / 4);
         flex-basis: calc((100% - 90px) / 4);
-  }
-  .team__title {
-    padding: 30px;
-  }
-  .team__employee-name {
-    color: var(--primary-title-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    text-align: center;
-  }
-  .team__employee-position {
-    color: var(--primary-text-color);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-align: center;
-    margin: 0;
-    margin-top: 10px;
-    margin-bottom: 16px;
   }
 }
 
@@ -936,17 +974,17 @@ a {
   background-color: var(--accent-color);
 }
 
-@media screen and (min-width: 768px) {
-  .clients {
-    max-width: 768px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+.clients {
+  display: inline-block;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .clients__heading {
   margin-bottom: 30px;
+  font-size: 28px;
 }
 .clients__list {
+  min-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -955,9 +993,10 @@ a {
   gap: 30px;
 }
 .clients__item {
+  width: 210px;
   height: 92px;
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
 }
 .clients__link {
   display: -webkit-box;
@@ -985,49 +1024,38 @@ a {
   border: 1px solid rgb(33, 150, 243);
   fill: var(--accent-color);
 }
+@media screen and (min-width: 768px) {
+  .clients {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
+}
 @media screen and (min-width: 1200px) {
   .clients {
-    max-width: 1200px;
     padding-top: 94px;
     padding-bottom: 94px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .clients__heading {
     margin-bottom: 50px;
+    font-size: 36px;
   }
   .clients__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
   .clients__item {
-    height: 92px;
     -ms-flex-preferred-size: calc((100% - 150px) / 6);
         flex-basis: calc((100% - 150px) / 6);
-  }
-  .clients__link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    fill: #afb1b8;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    -webkit-transition-property: fill, border;
-    transition-property: fill, border;
-    -webkit-transition-duration: 250ms;
-            transition-duration: 250ms;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .clients__link:hover, .clients__link:focus {
-    border: 1px solid rgb(33, 150, 243);
-    fill: var(--accent-color);
   }
 }
 
@@ -1212,13 +1240,19 @@ address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -moz-text-align-last: left;
-         text-align-last: left;
   }
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1233,6 +1267,7 @@ address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    text-align: left;
   }
   .footer__container {
     display: -webkit-box;
@@ -1303,17 +1338,11 @@ address {
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
-.signing-box .signing-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 570px;
-  gap: 12px;
-}
 .signing-box .signing-form__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding: 15px 16px;
+  margin-bottom: 20px;
   color: var(--secondary-text-color);
   background-color: var(--alternative-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1335,6 +1364,8 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
   gap: 10px;
   right: 0;
   bottom: 0;
@@ -1362,80 +1393,40 @@ address {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .signing-box {
+    margin-top: 60px;
+  }
+  .signing-box .signing-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 570px;
+  }
+  .signing-box .signing-form__input {
+    width: 358px;
+    height: 50px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .signing-box {
     margin-left: 93px;
-  }
-  .signing-box__title {
-    display: block;
     margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--secondary-text-color);
   }
-}
-.signing-box .signing-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 570px;
-  gap: 12px;
-}
-.signing-box .signing-form__input {
-  width: 358px;
-  height: 50px;
-  padding: 15px 16px;
-  color: var(--secondary-text-color);
-  background-color: var(--alternative-bg-color);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  -webkit-transition-property: border-color;
-  transition-property: border-color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.signing-box .signing-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10px;
-  right: 0;
-  bottom: 0;
-  width: 200px;
-  height: 50px;
-  padding: 10px 28px;
-  text-align: center;
-  color: var(--secondary-text-color);
-  background: #2196f3;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  -webkit-transition-property: background-color, -webkit-box-shadow;
-  transition-property: background-color, -webkit-box-shadow;
-  transition-property: background-color, box-shadow;
-  transition-property: background-color, box-shadow, -webkit-box-shadow;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.signing-box .signing-button:hover, .signing-box .signing-button:focus {
-  background: #188ce8;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  .signing-box .signing-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 570px;
+    gap: 12px;
+  }
 }/*# sourceMappingURL=main.css.map */

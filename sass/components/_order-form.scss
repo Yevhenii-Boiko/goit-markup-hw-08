@@ -123,7 +123,12 @@
     cursor: pointer;
   }
 }
+
 .order-form-agreement {
+  // Breakpoints:
+  // Mobile - 480px
+  // Tablet - 768px
+  // Desktop - 1200px
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,8 +158,8 @@
 
   &__desc {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 1.1;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
     user-select: none;
@@ -162,5 +167,13 @@
 
   &__link {
     color: var(--accent-color);
+  }
+
+  // Desctop styles
+  @media screen and (min-width: 1200px) {
+    &__desc {
+      font-size: 14px;
+      line-height: 1.7;
+    }
   }
 }

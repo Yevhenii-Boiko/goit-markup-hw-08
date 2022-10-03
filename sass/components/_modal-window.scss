@@ -1,10 +1,15 @@
 .modal {
+  // Breakpoints:
+  // Mobile - 480px
+  // Tablet - 768px
+  // Desktop - 1200px
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 528px;
+  width: 450px;
   height: auto;
   padding: 40px;
   background-color: var(--primary-bg-color);
@@ -35,6 +40,11 @@
     &:focus {
       fill: var(--accent-color);
     }
+  }
+
+  // Desctop styles
+  @media screen and (min-width: 1200px) {
+    width: 528px;
   }
 }
 .backdrope.is-hidden {
