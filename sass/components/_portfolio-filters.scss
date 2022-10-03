@@ -1,14 +1,28 @@
+// Breakpoints:
+// Mobile - 480px
+// Tablet - 768px
+// Desktop - 1200px
+
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  display: inline-block;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+
+  // Desktop styles
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filters {
+  width: 326px;
   display: flex;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 30px;
   gap: 8px;
 
   &__btn {
@@ -33,5 +47,19 @@
       border-radius: 4px;
       cursor: pointer;
     }
+  }
+  // Tablet styles
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    gap: 8px;
+  }
+  // Desktop styles
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
