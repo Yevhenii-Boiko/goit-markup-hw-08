@@ -1,10 +1,5 @@
-// Breakpoints:
-// Mobile - 480px
-// Tablet - 768px
-// Desktop - 1200px
-
 .project {
-  width: 450px;
+  width: 100%;
 
   &__item {
     margin-bottom: 30px;
@@ -15,11 +10,9 @@
   }
 
   @media screen and (min-width: 768px) {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    margin: 0;
 
     &__item {
       flex-basis: calc((100% - 30px) / 2);
@@ -100,6 +93,10 @@
     line-height: 2;
     letter-spacing: 0.06em;
     text-align: left;
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      font-size: 16px;
+    }
   }
 
   &__type {

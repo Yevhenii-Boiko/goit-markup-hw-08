@@ -1,28 +1,19 @@
 .header {
-  // Breakpoints:
-  // Mobile - 480px
-  // Tablet - 768px
-
-  // Desktop - 1200px
-  display: inline-block;
-  min-width: 480px;
+  width: 100%;
   border: 1px solid #ececec;
 
-  // Tablet styles
-  @media screen and (min-width: 768px) {
-    &__container {
-      min-width: 768px;
-      display: flex;
-      align-items: center;
-    }
+  &__container {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
   }
 
-  // Desktop styles
-  @media screen and (min-width: 1200px) {
+  // Tablet and desktop styles
+  @media screen and (min-width: 768px) {
     &__container {
-      min-width: 1200px;
-      display: flex;
-      align-items: center;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }
