@@ -29,12 +29,6 @@
     }
   }
 
-  &__img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-
   &__title {
     padding: 30px;
   }
@@ -83,12 +77,6 @@
       margin-bottom: 0;
       width: 354px;
       flex-basis: calc((100% - 30px) / 2);
-    }
-
-    &__img {
-      display: block;
-      max-width: 100%;
-      height: auto;
     }
   }
   // Desktop styles

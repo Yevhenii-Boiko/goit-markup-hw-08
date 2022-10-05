@@ -1,18 +1,25 @@
 .hero {
-
   margin-left: auto;
   margin-right: auto;
   padding: 118px 60px;
   background-color: #c4c4c4;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/hero/bg-img.png);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/img_sm-@1x.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/hero/img_sm-@2x.png);
+  }
 
   &__slogan {
     display: block;
@@ -28,6 +35,7 @@
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
+
   &__btn {
     display: block;
     width: 200px;
@@ -56,38 +64,35 @@
   // Tablet styles
   @media screen and (min-width: 768px) {
     max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 118px 204px;
-    background-color: #c4c4c4;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero/bg-img.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
+      url(../images/hero/img_md-@1x.png);
 
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/img_md-@2x.png);
+    }
+  }
   // Desktop styles
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-color: #c4c4c4;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero/bg-img.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      url(../images/hero/img_lg-@1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/img_lg-@2x.png);
+    }
 
     &__slogan {
       font-size: 44px;
