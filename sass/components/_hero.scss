@@ -13,12 +13,12 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero/img_sm-@1x.png);
+    url(../images/hero/img_sm-@1x_result.png);
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../images/hero/img_sm-@2x.png);
+    background-image: url(../images/hero/img_sm-@2x_result.png);
   }
 
   &__slogan {
@@ -69,12 +69,12 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero/img_md-@1x.png);
+      url(../images/hero/img_md-@1x_result.png);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/hero/img_md-@2x.png);
+      background-image: url(../images/hero/img_md-@2x_result.png);
     }
   }
   // Desktop styles
@@ -86,12 +86,12 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../images/hero/img_lg-@1x.png);
+      url(../images/hero/Img_lg-@1x_result.png);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/hero/img_lg-@2x.png);
+      background-image: url(../images/hero/Img_lg-@2x_result.png);
     }
 
     &__slogan {
